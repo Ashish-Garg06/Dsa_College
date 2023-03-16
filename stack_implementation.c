@@ -17,12 +17,12 @@ void push()
         temp = top + 1;
         array[temp] = a;
         top++;
-        printf("Element pushed");
+        printf("Element %d pushed at %d position",a,top);
     }
 }
 void pop()
 {
-    int temp;
+    int a,temp;
     if (top == -1)
     {
         printf("Stack underflow Pop not allowed");
@@ -30,9 +30,10 @@ void pop()
     else
     {
         temp = top;
+        a=array[temp];
         array[temp] = 0;
         top--;
-        printf("Element popped");
+        printf("Element %d popped from %d position",a,temp);
     }
 }
 void display()
@@ -47,7 +48,7 @@ int main()
     int k;
     while (1)
     {
-        printf("\nWhat Operation do you want to Perform :Press \n1 for push \n2 for pop \n3 for display \n4 to end the program \n: ");
+        printf("\n\nWhat Operation do you want to Perform :Press \n1 for push \n2 for pop \n3 for display \n4 to end the program \n: ");
         scanf("%d", &k);
         if (k == 1)
         {
